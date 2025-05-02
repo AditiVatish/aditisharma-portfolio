@@ -3,9 +3,30 @@ html {
 }/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   color: #212529;
   line-height: 1.6;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
 }
 
 h1, h2, h3, h4 {
@@ -34,7 +55,7 @@ section {
 /* Hero Section */
 #hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('/aditisharma-portfolio/images/profile.jpg') center/cover no-repeat;
+  url('/aditisharma-portfolio/images/profile.jpg') center/cover no-repeat;
   color: #fff;
   padding: 120px 0;
   text-align: center;
