@@ -34,7 +34,7 @@ section {
 /* Hero Section */
 #hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('your-image.jpg') center/cover no-repeat;
+              url('/aditisharma-portfolio/images/profile.jpg') center/cover no-repeat;
   color: #fff;
   padding: 120px 0;
   text-align: center;
