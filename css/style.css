@@ -1,107 +1,213 @@
-html {
-  scroll-behavior: smooth;
-}/* General Styles */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* Base Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  color: #212529;
-  line-height: 1.6;
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-}
-@keyframes gradient {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-.typewriter {
-  overflow: hidden;
-  border-right: .15em solid white;
-  white-space: nowrap;
-  animation: typing 3s steps(30, end), blink .75s step-end infinite;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-@keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
+    font-family: 'Quicksand', sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 600;
+    font-weight: 700;
+    color: #1d3557;
 }
 
-section {
-  padding: 60px 0;
+a {
+    color: #457b9d;
+    text-decoration: none;
 }
 
-/* Navbar */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .navbar-brand {
-  font-weight: 700;
+    font-weight: 700;
+    color: #e76f51;
 }
 
-.navbar-nav .nav-link {
-  font-weight: 500;
-  margin-left: 20px;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #007bff;
+.navbar-brand:hover {
+    color: #f4a261;
 }
 
 /* Hero Section */
-#hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('/aditisharma-portfolio/images/profile.jpg') center/cover no-repeat;
-  color: #fff;
-  padding: 120px 0;
-  text-align: center;
+.hero {
+    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    padding: 100px 20px;
+    text-align: center;
 }
 
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-#hero p {
-  font-size: 1.25rem;
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-/* Section Headings */
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+/* About Section */
+#about {
+    padding: 80px 0;
 }
 
-/* Cards */
+#about img {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
 .card {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-/* Buttons */
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
+.card-body h5 {
+    color: #264653;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+}
+
+form input, form textarea {
+    border-radius: 8px;
+}
+
+form button {
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #21867a;
 }
 
 /* Footer */
 footer {
-  background-color: #343a40;
+    background-color: #1d3557;
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #f4a261;
+}
+
+footer a:hover {
+    color: #e76f51;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+body {
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+}
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+#projects {
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+}
+#experience {
+  background: #fffaf5;
+}
+#skills {
+  background: #f2fdf7;
+}
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ffff; /* Aqua glow */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Glowing pulse animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
+    }
+    50% {
+      box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    }
+    100% {
+      box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
+    }
+  }
+  
+  
+  /* Cursor hover effect */
+  .cursor.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(0, 123, 255, 0.2);
+  }
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.btn-outline-primary {
+  border-color: #a463f2;
+  color: #a463f2;
+}
+.btn-outline-primary:hover {
+  background-color: #a463f2;
   color: white;
-  text-align: center;
+}
+.navbar {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
 }
